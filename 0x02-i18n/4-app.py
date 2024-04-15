@@ -32,11 +32,5 @@ def get_index() -> str:
     """The home/index page."""
     return render_template('4-index.html')
 
-
-@app.route('/user/<username>?locale=fr')
-def display(username):
-    return render_template('4-index.html', name=username)
-
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
